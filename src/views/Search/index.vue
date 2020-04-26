@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="page-search">
+    搜索
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Search'
 }
 </script>

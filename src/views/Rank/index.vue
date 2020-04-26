@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="page-rank">
+    排行
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Rank'
 }
 </script>

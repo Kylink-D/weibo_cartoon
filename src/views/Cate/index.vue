@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="page-cate">
+    分类
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Cate'
 }
 </script>
