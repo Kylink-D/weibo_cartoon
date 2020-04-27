@@ -13,7 +13,6 @@
             <div to="/mine" class="nav_mine"></div>
           </div>
         </div>
-        <!---->
       </div>
     </div>
     <div class="home_content_loaded scroll">
@@ -24,13 +23,13 @@
       >
         <div class="swipeContainer">
           <div class="swipe_wrap">
-            <swiper class="mint-swipe">
+            <swiper class="mint-swipe" v-if="swiperData.length > 0">
               <swiper-item
                 class="swiper-item"
-                v-for="item in imgList"
-                :key="item"
+                v-for="item in swiperData"
+                :key="item.info_id"
               >
-                <img src="../../assets/images/gU3Vg3gU.jpg" alt="" />
+                <img :src="item.image_ext_url" alt="" />
               </swiper-item>
             </swiper>
           </div>
@@ -65,183 +64,70 @@
             <p>完结</p>
           </div>
         </div>
-        <!---->
-        <div class="recommend_block">
+        <!-- <div class="recommend_block">
           <div class="home_recommend_header">
             <div class="home_recommend_title">精品佳作</div>
             <div class="home_recommend_more">更多&gt;</div>
           </div>
           <div>
             <div class="home_recommend_comics threeClassic">
-              <div class="home_recommend_comic">
+              <div class="home_recommend_comic" v-for="item in goodWork" :key="item.info_id">
                 <div class="comic_cover_container" style="width: 100%;">
                   <div
                     class="comic_cover"
-                    style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/20/0JOTJle9.jpg");'
+                    :style="`width: 100%; background-image: url(${item.image_ext_url});`"
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
                       <div class="comic_cover_title" style="font-size: 14px;">
-                        总裁在上
+                        {{item.title}}
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
-                      她，没有反抗的权利
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="home_recommend_comic">
-                <div class="comic_cover_container" style="width: 100%;">
-                  <div
-                    class="comic_cover"
-                    style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/13/U7BV1BOY.jpg");'
-                  ></div>
-                  <!---->
-                  <div class="comic_cover_info">
-                    <div class="comic_cover_titleBox">
-                      <!---->
-                      <div class="comic_cover_title" style="font-size: 14px;">
-                        恶魔，别吻我
-                      </div>
-                      <!---->
-                    </div>
-                    <div class="comic_cover_desc" style="font-size: 12px;">
-                      美男小三居然是恶魔？
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="home_recommend_comic">
-                <div class="comic_cover_container" style="width: 100%;">
-                  <div
-                    class="comic_cover"
-                    style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/02/11/4OUmhN18.jpg");'
-                  ></div>
-                  <!---->
-                  <div class="comic_cover_info">
-                    <div class="comic_cover_titleBox">
-                      <!---->
-                      <div class="comic_cover_title" style="font-size: 14px;">
-                        毒步天下：特工神医小兽妃
-                      </div>
-                      <!---->
-                    </div>
-                    <div class="comic_cover_desc" style="font-size: 12px;">
-                      王牌特工魂穿废柴萝莉
+                      {{item.extra.watching_focus}}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!---->
           </div>
-        </div>
-        <div class="recommend_block">
+        </div> -->
+        <!-- <div class="recommend_block">
           <div class="home_recommend_header">
             <div class="home_recommend_title">人气作品</div>
             <div class="home_recommend_more">更多&gt;</div>
           </div>
           <div>
             <div class="home_recommend_comics fourClassic">
-              <div class="home_recommend_comic">
+              <div class="home_recommend_comic" v-for="item in popularWork" :key="item.info_id">
                 <div class="comic_cover_container" style="width: 100%;">
                   <div
                     class="comic_cover"
-                    style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2019/02/12/c0C6DGjZ.jpg");'
+                    :style="`width: 100%; background-image: url(${item.image_ext_url});`"
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
                       <div class="comic_cover_title" style="font-size: 14px;">
-                        帝少专宠霸道妻
+                        {{item.title}}
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
-                      占了便宜还想跑？
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="home_recommend_comic">
-                <div class="comic_cover_container" style="width: 100%;">
-                  <div
-                    class="comic_cover"
-                    style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/20/f4GWamfV.jpg");'
-                  ></div>
-                  <!---->
-                  <div class="comic_cover_info">
-                    <div class="comic_cover_titleBox">
-                      <!---->
-                      <div class="comic_cover_title" style="font-size: 14px;">
-                        束缚游戏：总裁玩上瘾
-                      </div>
-                      <!---->
-                    </div>
-                    <div class="comic_cover_desc" style="font-size: 12px;">
-                      愿以青春献流年
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="home_recommend_comic">
-                <div class="comic_cover_container" style="width: 100%;">
-                  <div
-                    class="comic_cover"
-                    style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/20/dxzPDPoQ.jpg");'
-                  ></div>
-                  <!---->
-                  <div class="comic_cover_info">
-                    <div class="comic_cover_titleBox">
-                      <!---->
-                      <div class="comic_cover_title" style="font-size: 14px;">
-                        天价宠妻：总裁夫人休想逃
-                      </div>
-                      <!---->
-                    </div>
-                    <div class="comic_cover_desc" style="font-size: 12px;">
-                      宠妻狂魔，打脸前任！
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="home_recommend_comic">
-                <div class="comic_cover_container" style="width: 100%;">
-                  <div
-                    class="comic_cover"
-                    style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/02/11/8Jsq2AOh.jpg");'
-                  ></div>
-                  <!---->
-                  <div class="comic_cover_info">
-                    <div class="comic_cover_titleBox">
-                      <!---->
-                      <div class="comic_cover_title" style="font-size: 14px;">
-                        第101次禁声—富少轻点疼
-                      </div>
-                      <!---->
-                    </div>
-                    <div class="comic_cover_desc" style="font-size: 12px;">
-                      全站最虐的一本漫画
+                      {{item.extra.watching_focus}}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!---->
           </div>
-        </div>
-        <div class="recommend_block">
+        </div> -->
+        <homeone :list="workGood" :myclass="`threeClassic`" :title="list_location[1]"></homeone>
+        <homeone :list="workPopular" :myclass="`fourClassic`" :title="list_location[2]"></homeone>
+        <!-- <div class="recommend_block">
           <div class="home_recommend_header">
             <div class="home_recommend_title">最新上架</div>
             <div class="home_recommend_more">更多&gt;</div>
           </div>
           <div>
-            <!---->
             <div class="home_recommend_comics threeColumn">
               <div class="home_recommend_comic">
                 <div class="comic_horizontal_container">
@@ -277,7 +163,6 @@
                       翻阅漫画
                     </div>
                   </div>
-                  <!---->
                 </div>
               </div>
               <div class="home_recommend_comic">
@@ -314,7 +199,6 @@
                       开源动漫
                     </div>
                   </div>
-                  <!---->
                 </div>
               </div>
               <div class="home_recommend_comic">
@@ -351,7 +235,6 @@
                       风露社
                     </div>
                   </div>
-                  <!---->
                 </div>
               </div>
             </div>
@@ -370,14 +253,11 @@
                     class="comic_cover"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/20/ymrbyNpY.jpg");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
                       <div class="comic_cover_title" style="font-size: 14px;">
                         霸道总裁爱上我
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       将她困在身边，一睡到底
@@ -391,14 +271,11 @@
                     class="comic_cover"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/02/20/E8j8aIH7.png");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
                       <div class="comic_cover_title" style="font-size: 14px;">
                         倾世帝王姬
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       卑贱女奴，一夜觉醒帝王
@@ -407,7 +284,6 @@
                 </div>
               </div>
             </div>
-            <!---->
           </div>
         </div>
         <div class="recommend_block">
@@ -425,17 +301,11 @@
                     lazy="loaded"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/20/99IpMOXX.jpg");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
-                      <div
-                        class="comic_cover_title"
-                        style="font-size: 14px;"
-                      >
+                      <div class="comic_cover_title" style="font-size: 14px;">
                         惹上首席总裁之千金归来
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       那个男人，她不该招惹的
@@ -451,17 +321,11 @@
                     lazy="loaded"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/20/eLWu5aeA.jpg");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
-                      <div
-                        class="comic_cover_title"
-                        style="font-size: 14px;"
-                      >
+                      <div class="comic_cover_title" style="font-size: 14px;">
                         别跑，小鲜肉
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       女霸总倒追当红小鲜肉
@@ -477,17 +341,11 @@
                     lazy="loaded"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/02/20/lC1lRXS1.jpg");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
-                      <div
-                        class="comic_cover_title"
-                        style="font-size: 14px;"
-                      >
+                      <div class="comic_cover_title" style="font-size: 14px;">
                         女帝的后宫
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       七个驸马？我不够分啦！
@@ -496,7 +354,6 @@
                 </div>
               </div>
             </div>
-            <!---->
           </div>
         </div>
         <div class="recommend_block">
@@ -514,17 +371,11 @@
                     lazy="loaded"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/04/20/x6dbxpxt.jpg");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
-                      <div
-                        class="comic_cover_title"
-                        style="font-size: 14px;"
-                      >
+                      <div class="comic_cover_title" style="font-size: 14px;">
                         只对你臣服
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       占了便宜还想跑？
@@ -540,17 +391,11 @@
                     lazy="loaded"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/02/11/idFJtbBA.png");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
-                      <div
-                        class="comic_cover_title"
-                        style="font-size: 14px;"
-                      >
+                      <div class="comic_cover_title" style="font-size: 14px;">
                         甜心V5：BOSS宠之过急
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       舅舅！老公是什么？
@@ -566,17 +411,11 @@
                     lazy="loaded"
                     style='width: 100%; background-image: url("https://img.manhua.weibo.com/client/2020/02/11/5ucQ3YSk.jpg");'
                   ></div>
-                  <!---->
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">
-                      <!---->
-                      <div
-                        class="comic_cover_title"
-                        style="font-size: 14px;"
-                      >
+                      <div class="comic_cover_title" style="font-size: 14px;">
                         男神萌宝一锅端
                       </div>
-                      <!---->
                     </div>
                     <div class="comic_cover_desc" style="font-size: 12px;">
                       总裁！萌宝！快到锅里来！
@@ -585,9 +424,8 @@
                 </div>
               </div>
             </div>
-            <!---->
           </div>
-        </div>
+        </div> -->
         <el-backtop target=".home_content_loaded" :bottom="8" :right="8">
           <div class="goTop"></div>
         </el-backtop>
@@ -598,16 +436,23 @@
 
 <script>
 import { Swiper, SwiperItem } from '@/components/Swiper'
+import { getHome } from '@/api/cartoon'
+import { Homeone } from '@/components/Home'
 export default {
   name: 'Home',
   components: {
     Swiper,
-    SwiperItem
+    SwiperItem,
+    Homeone
   },
   data () {
     return {
-      imgList: [1, 2, 3, 4, 5],
-      isLoading: false
+      isLoading: false,
+      // homeData: {},
+      swiperData: [],
+      goodWork: [],
+      popularWork: [],
+      location_list: []
     }
   },
   methods: {
@@ -615,7 +460,47 @@ export default {
       setTimeout(() => {
         this.isLoading = false
       }, 1000)
+    },
+
+    getHome () {
+      getHome().then(res => {
+        this.swiperData = res.data.h5_recommend_female_rotation_map
+        this.goodWork = res.data.h5_recommend_female_fine_works.slice(0, 3)
+        this.popularWork = res.data.h5_recommend_female_popular_works.slice(0, 4)
+        this.location_list = res.data.location_list
+      })
     }
+  },
+  computed: {
+    workGood () {
+      return this.goodWork.map(item => {
+        return {
+          info_id: item.info_id,
+          title: item.title,
+          watching_focus: item.extra.watching_focus,
+          image_ext_url: item.image_ext_url
+        }
+      })
+    },
+    workPopular () {
+      return this.popularWork.map(item => {
+        return {
+          info_id: item.info_id,
+          title: item.title,
+          watching_focus: item.extra.watching_focus,
+          image_ext_url: item.image_ext_url
+        }
+      })
+    },
+    list_location () {
+      return this.location_list.map(item => {
+        return item.location_cn
+      })
+    }
+  },
+
+  created () {
+    this.getHome()
   }
 }
 </script>
@@ -731,21 +616,8 @@ export default {
         font-size: 14px;
       }
     }
-    .home_recommend_title::before {
-      position: absolute;
-      top: 11px;
-      left: 0;
-      content: "";
-      width: 22px;
-      height: 22px;
-      background: url("../../assets/images/default_avatar.8bc0dfd7.png");
-      background-size: cover;
-      background-position: 50%;
-      background-repeat: no-repeat;
-    }
   }
 }
-@import "@/assets/styles/home.scss";
 </style>
 
 <style lang="scss">
@@ -759,4 +631,17 @@ export default {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.home_recommend_title::before {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/default_avatar.8bc0dfd7.png");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+@import "@/assets/styles/home.scss";
 </style>
