@@ -11,3 +11,10 @@ export const getHome = () => {
     method: 'GET'
   })
 }
+// http://manhua.weibo.cn/wbcomic/comic/daypub_list?pub_day=&page_num=1&rows_num=20&_type=h5
+export const getDay = () => {
+  return request({
+    url: '/wbcomic/comic/daypub_list?pub_day=&page_num=1&rows_num=20&_type=h5',
+    method: 'GET'
+  })
+}

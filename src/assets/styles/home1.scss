@@ -6,7 +6,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	// background-image: url(../img/add_fav.35784ea1.png);
+
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -122,6 +122,7 @@ button {
 	height: 20px;
 	border-radius: 100%;
 	margin-left: 2.5px;
+
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
@@ -194,6 +195,7 @@ button {
 	flex-shrink: 0;
 	width: 18px;
 	height: 18px;
+
 	margin-left: 4px;
 }
 .lock .shutdown_icon,
@@ -204,7 +206,6 @@ button {
 .lock .shutdown_icon {
 	width: 20px;
 	height: 20px;
-	// background-image: url(../img/clock.8de84f9b.png);
 }
 .lock .wait-free {
 	background-size: 100% 100%;
@@ -233,7 +234,7 @@ button {
 .limited_free .shutdown-box .shutdown_icon {
 	width: 20px;
 	height: 20px;
-	// background-image: url(../img/clock.8de84f9b.png);
+
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
@@ -280,6 +281,7 @@ button {
 }
 .comic_chapter_content .chapter_content_num {
 	font-size: 32px;
+	font-weight: 700;
 }
 .comic_chapter_content .chapter_content_reload {
 	color: #e9e9e9;
@@ -414,7 +416,6 @@ button {
 	content: '';
 }
 .comic_info .comic_irregular_bg {
-	// background-image: url(../img/cover_bottom.50206627.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	height: 20px;
@@ -486,7 +487,7 @@ button {
 }
 .hot_icon:before {
 	content: ' ';
-	// background-image: url(../img/hot.5adf85f9.png);
+
 	width: 8px;
 	height: 10px;
 	display: inline-block;
@@ -667,7 +668,6 @@ button {
 .comic_cover[lazy='error'],
 .comic_cover[lazy='loading'] {
 	background-color: #f7f7ff;
-	// background-image: url(../img/ink@3x.5f2ba4da.png) !important;
 	background-size: 44px 32px;
 	background-position: 50%;
 }
@@ -681,6 +681,15 @@ button {
 .end_list_box {
 	flex-grow: 1;
 	overflow: auto;
+}
+
+input:-moz-placeholder,
+input::-moz-placeholder {
+	color: #ccc;
+}
+textarea:-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #ccc;
 }
 .pro_pannel {
 	padding: 15px;
@@ -700,7 +709,7 @@ button {
 	width: 100%;
 	height: 227px;
 	font-size: 13px;
-	line-height:22px;
+	line-height: 22px;
 	resize: none;
 }
 .pro_pannel .problem_input_box {
@@ -720,7 +729,7 @@ button {
 	border: none;
 	outline: none;
 	font-size: 14px;
-	margin: -px32(4) 0;
+	margin: -rem2(4) 0;
 	padding: 4px 0;
 }
 .pro_pannel .problem_input_box i {
@@ -735,7 +744,7 @@ button {
 }
 .pro_pannel .problem_btn {
 	margin: 13px auto;
-	width: 1140px;
+	width: 300px;
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
@@ -782,6 +791,7 @@ button {
 .pro_list .item_title i {
 	width: 24px;
 	height: 24px;
+
 	background-size: cover;
 }
 .pro_list .open {
@@ -801,7 +811,7 @@ button {
 	word-break: break-all;
 }
 .pro_list .item_des .content {
-	line-height:22px;
+	line-height: 22px;
 	font-size: 16px;
 	color: #999;
 	word-break: break-all;
@@ -901,14 +911,14 @@ button {
 .form_bg {
 	flex-direction: column;
 	width: 100%;
-	// background-image: url(../img/login_bg.287c5738.png);
+
 	background-size: cover;
 }
 .form_bg .form_logo {
 	margin-top: 54px;
 	width: 182px;
 	height: 190px;
-	// background-image: url(../img/login_logo.ec1f31c5.png);
+
 	background-size: cover;
 }
 .form_bg .form_outer {
@@ -925,7 +935,7 @@ button {
 .form_bg .input_outer .comic_input {
 	font-size: 14px;
 	height: 44px;
-	line-height:22px;
+	line-height: 22px;
 }
 .form_bg .vali_input .comic_input {
 	max-width: 150px;
@@ -977,6 +987,7 @@ a {
 	color: #666;
 	letter-spacing: 0;
 	line-height: 44px;
+	font-weight: 700;
 }
 .hot_search .hot_serch_header .search_icon {
 	width: 44px;
@@ -1007,7 +1018,7 @@ a {
 }
 .hide_scroll_bar {
 	overflow: hidden;
-	height: 136px;
+	height: 196px;
 }
 .hide_scroll_bar .recommends_infinite {
 	overflow-x: auto;
@@ -1105,9 +1116,6 @@ a {
 	font-size: 10px;
 	color: #efefef;
 	text-align: center;
-}
-.label_white_pay {
-	// background-image: url(../img/white_pay.41031eed.png);
 }
 .label_pink_pay {
 	background-repeat: no-repeat;
@@ -1257,9 +1265,6 @@ a {
 .nav_right div {
 	flex-shrink: 0;
 }
-.white_nav .nav_left .l_con.back_btn {
-	// background-image: url(../img/back_white.4b142d5e.png);
-}
 .white_nav .nav_middle {
 	flex: 1;
 	text-align: center;
@@ -1305,7 +1310,7 @@ a {
 	height: 184px;
 }
 .load_state p {
-	margin-bottom:22px;
+	margin-bottom: 22px;
 	color: #999;
 	font-size: 14px;
 }
@@ -1353,19 +1358,16 @@ a {
 }
 .rank_list_box .rank_list_con:first-child .comic_cover_horizontal_rank,
 .rank_list_box .rank_list_con:first-child .comic_cover_rank {
-	// background-image: url(../img/rank_num1.6f4a3ebc.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 .rank_list_box .rank_list_con:nth-child(2) .comic_cover_horizontal_rank,
 .rank_list_box .rank_list_con:nth-child(2) .comic_cover_rank {
-	// background-image: url(../img/rank_num2.9a307695.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 .rank_list_box .rank_list_con:nth-child(3) .comic_cover_horizontal_rank,
 .rank_list_box .rank_list_con:nth-child(3) .comic_cover_rank {
-	// background-image: url(../img/rank_num3.8800c965.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -1489,9 +1491,9 @@ a {
 	top: 11px;
 	left: 0;
 	content: '';
-	width:22px;
-	height:22px;
-	// background: url(../img/default_avatar.8bc0dfd7.png);
+	width: 22px;
+	height: 22px;
+
 	background-size: cover;
 	background-position: 50%;
 	background-repeat: no-repeat;
@@ -1502,7 +1504,7 @@ a {
 	width: 42px;
 	height: 20px;
 	text-align: center;
-	line-height:22px;
+	line-height: 22px;
 	background: #4a90e2;
 	border-radius: 10px;
 }
@@ -1559,7 +1561,7 @@ a {
 	border: 0;
 	padding-top: 4px;
 	width: 206px;
-	height:22px;
+	height: 22px;
 	line-height: normal;
 	font-size: 14px;
 	color: #666;
@@ -1569,6 +1571,7 @@ a {
 	flex-shrink: 0;
 	width: 44px;
 	height: 44px;
+
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -1577,6 +1580,7 @@ a {
 	width: 20px;
 	height: 20px;
 	margin: 12px 18px 12px 0;
+
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -1686,6 +1690,7 @@ a {
 	white-space: nowrap;
 	background: #f75d79;
 }
+
 @keyframes circle {
 	0% {
 		transform: rotate(0);
@@ -1697,7 +1702,7 @@ a {
 .share_btn {
 	width: 44px;
 	height: 44px;
-	// background-image: url(../img/share.944e07ed.png);
+
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -1705,15 +1710,9 @@ a {
 	background: rgba(0, 0, 0, 0.85);
 	z-index: 10000;
 }
-.share_qq {
-	// background-image: url(../img/icon_qzone.7af32a12.png);
-}
 .share_qq,
 .share_wb {
 	background-size: 100% 100%;
-}
-.share_wb {
-	// background-image: url(../img/coagent_weibo.61c733fb.png);
 }
 .share_icon,
 .share_qq,
@@ -1759,27 +1758,24 @@ a {
 	align-items: center;
 }
 .share_section {
-	width: 30px;
-	height: 30px;
+	width: 80px;
+	height: 80px;
 	text-align: center;
 	line-height: 24px;
 	font-size: 14px;
 	color: #999;
 }
 .share_qzone {
-	// background: url(../img/icon_qzone.7af32a12.png);
 	background-size: cover;
 	background-position: 50%;
 	background-repeat: no-repeat;
 }
 .share_qq {
-	// background: url(../img/icon_qq.694c3901.png);
 	background-size: cover;
 	background-position: 50%;
 	background-repeat: no-repeat;
 }
 .share_wb {
-	// background: url(../img/coagent_weibo.61c733fb.png);
 	background-size: cover;
 	background-position: 50%;
 	background-repeat: no-repeat;
@@ -1799,7 +1795,7 @@ a {
 	color: #666;
 }
 .swipe_wrap {
-	height: 154px;
+	height: 214px;
 	margin: 0 16px 0 16px;
 	background: #fff;
 }
@@ -1808,12 +1804,9 @@ a {
 }
 .mint-swipe {
 	width: 100%;
-	height: 154px;
+	height: 214px;
 }
-.mint-swipe-items-wrap {
-	border-radius: 8px;
-	overflow: hidden;
-}
+
 .mint-swipe-indicator {
 	background: #fff;
 	opacity: 1;
@@ -1851,7 +1844,7 @@ a {
 	background-position: 50%;
 }
 .water_content .outer .water_long .item_bg {
-	height: 140px;
+	height: 200px;
 }
 .water_content .outer .water_short .item_bg {
 	height: 150px;
@@ -1884,6 +1877,9 @@ a {
 }
 .downloadDialog .dlg_state_big {
 	top: -56px !important;
+}
+.downloadDialog .dlg_cont .dlg_cont_tit {
+	font-weight: 500 !important;
 }
 .downloadDialog .dlg_cont .dlg_cont_con,
 .downloadDialog .dlg_cont .dlg_cont_tit {

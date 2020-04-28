@@ -6,7 +6,7 @@
     </div>
     <div>
       <div class="home_recommend_comics threeColumn">
-        <div class="home_recommend_comic" v-for="item in list" :key="item.info_id">
+        <div class="home_recommend_comic" v-for="item in list" :key="item.info_id" v-lazy="item.image_ext_url">
           <div class="comic_horizontal_container">
             <div
               class="comic_cover comice_horizontal_cover"

@@ -10,8 +10,8 @@
           <div class="nav_middle"></div>
           <div class="nav_right">
             <div class="nav_switch_gender female_btn"></div>
-            <div class="nav_serach"></div>
-            <div to="/mine" class="nav_mine"></div>
+            <div class="nav_serach" @click="$router.push('/search')"></div>
+            <div to="/mine" class="nav_mine" @click="$router.push('/mine')"></div>
           </div>
         </div>
       </div>
@@ -27,6 +27,7 @@
                 class="swiper-item"
                 v-for="item in swiperData"
                 :key="item.info_id"
+                v-lazy="item.image_ext_url"
               >
                 <img :src="item.image_ext_url" alt="" />
               </swiper-item>
@@ -35,19 +36,19 @@
         </div>
         <!-- 导航栏 -->
         <div class="home_menu">
-          <div class="home_menu_item">
+          <div class="home_menu_item" @click="$router.push('/daypub')">
             <img src="//img.manhua.weibo.com/static/b/vcomic-h5/dist/img/daypub.7d71503a.png" alt=""/>
             <p>放送表</p>
           </div>
-          <div class="home_menu_item">
+          <div class="home_menu_item" @click="$router.push('/cate')">
             <img src="//img.manhua.weibo.com/static/b/vcomic-h5/dist/img/catelog.3cfb4bb6.png" alt=""/>
             <p>分类</p>
           </div>
-          <div class="home_menu_item">
+          <div class="home_menu_item" @click="$router.push('/rank')">
             <img src="//img.manhua.weibo.com/static/b/vcomic-h5/dist/img/rank.bfd0ebb0.png" alt=""/>
             <p>榜单</p>
           </div>
-          <div class="home_menu_item">
+          <div class="home_menu_item" @click="$router.push('/comicend')">
             <img src="//img.manhua.weibo.com/static/b/vcomic-h5/dist/img/ending.932e7864.png" alt=""/>
             <p>完结</p>
           </div>
@@ -327,5 +328,5 @@ export default {
   background-position: 50%;
   background-repeat: no-repeat;
 }
-@import "@/assets/styles/home.scss";
+// @import "@/assets/styles/home.scss";
 </style>

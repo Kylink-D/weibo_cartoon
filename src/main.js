@@ -7,11 +7,16 @@ import ElementUI from 'element-ui'
 
 import './assets/styles/base.scss'
 import 'element-ui/lib/theme-chalk/index.css'
+import './assets/styles/home1.scss'
+import './assets/styles/page.scss'
 
 Vue.use(ElementUI)
 Vue.use(PullRefresh)
 Vue.use(Lazyload, {
-  lazyComponent: true,
+  Homeone: true,
+  Hometwo: true,
+  Swiper: true,
+  SwiperItem: true,
   preload: 1.3
 })
 
