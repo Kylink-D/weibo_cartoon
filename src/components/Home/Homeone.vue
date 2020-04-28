@@ -48,7 +48,7 @@ export default {
       type: String
     },
     title: {
-      type: Array
+      type: String
     }
   }
 }
