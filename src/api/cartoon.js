@@ -64,3 +64,27 @@ export const getClassdata = (cate_id = 0, end_status = 0, comic_pay_status = 0, 
     }
   })
 }
+
+// 获取排行页面数据
+// 阅读榜 http://manhua.weibo.cn/wbcomic/home/rank_read?_type=h5
+// 综合榜 http://manhua.weibo.cn/wbcomic/home/rank?_type=h5
+export const getRankone = () => {
+  return request({
+    url: '/wbcomic/home/rank_read?_type=h5',
+    method: 'GET'
+  })
+}
+// 新作榜 http://manhua.weibo.cn/wbcomic/home/rank_share?_type=h5
+export const getRanktwo = () => {
+  return request({
+    url: '/wbcomic/home/rank_share?_type=h5',
+    method: 'GET'
+  })
+}
+// 综合榜 http://manhua.weibo.cn/wbcomic/home/rank?_type=h5
+export const getRankthree = () => {
+  return request({
+    url: '/wbcomic/home/rank?_type=h5',
+    method: 'GET'
+  })
+}

@@ -311,16 +311,6 @@ export default {
 </style>
 
 <style lang="scss">
-.goTop {
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  background-color: #fff;
-  background-image: url("~@/assets/images/goTop.png");
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
 .home_recommend_title::before {
   position: absolute;
   top: 11px;

@@ -43,8 +43,11 @@
                     </div>
                   </div>
                 </div>
-                <!-- <infinite-loading @infinite="infiniteHandler"></infinite-loading> -->
               </div>
+              <!-- 回到顶部 -->
+              <el-backtop target=".loadMoreWraper" :bottom="8" :right="8">
+                <div class="goTop"></div>
+              </el-backtop>
             </van-pull-refresh>
             <div class="list_notdone" v-if="isShow">
               <img
