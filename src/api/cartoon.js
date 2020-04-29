@@ -97,3 +97,12 @@ export const getComicend = () => {
     method: 'GET'
   })
 }
+
+// searce data
+// http://manhua.weibo.cn/wbcomic/home/hot_words?_type=h5
+export const getHotsearch = () => {
+  return request({
+    url: '/wbcomic/home/hot_words?_type=h5',
+    method: 'GET'
+  })
+}

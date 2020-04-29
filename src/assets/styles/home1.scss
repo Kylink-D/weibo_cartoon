@@ -972,6 +972,9 @@ a {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+.clear {
+	background-image: url('../images/clearsearch.png');
+}
 .hot_search {
 	padding: 16px 16px 24px;
 }
@@ -1576,6 +1579,7 @@ a {
 	background-size: 100% 100%;
 }
 #search_ .search_header .search_ferame .search_clear_cion {
+	background-image: url('../images/delete.png');
 	flex-shrink: 0;
 	width: 20px;
 	height: 20px;
