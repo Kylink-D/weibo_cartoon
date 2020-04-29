@@ -30,8 +30,8 @@ export const getClassname = () => {
   })
 }
 
-// 获取 分类 具体数据
-// 三个全部 ：      http://manhua.weibo.cn/wbcomic/comic/filter_result?cate_id=0&end_status=0&comic_pay_status=0&page_num=1&rows_num=20&order=&_type=h5
+// 获取 分类 具体数据 http://manhua.weibo.cn/wbcomic/comic/filter_result?cate_id=0&end_status=0&comic_pay_status=0&page_num=1&rows_num=20&order=&_type=h5
+// 三个全部 ：       http://manhua.weibo.cn/wbcomic/comic/filter_result?cate_id=0&end_status=0&comic_pay_status=0&page_num=1&rows_num=20&order=&_type=h5
 // 剧情 全部 全部   http://manhua.weibo.cn/wbcomic/comic/filter_result?cate_id=1&end_status=0&comic_pay_status=0&page_num=1&rows_num=20&order=&_type=h5
 /**
   cate_id: 5
@@ -49,20 +49,18 @@ export const getClassname = () => {
  * @param {Number} page_num 第几页
  * @param {Number} rows_num 数量
  */
-export const getClassdata = (cateId = 0, endStatus = 0, comic = 0, pageNum = 1) => {
-  return {
-    url: 'http://manhua.weibo.cn/wbcomic/comic/filter_result',
+export const getClassdata = (cate_id = 0, end_status = 0, comic_pay_status = 0, page_num = 1) => {
+  return request({
+    url: '/wbcomic/comic/filter_result',
     method: 'GET',
     params: {
+      cate_id,
+      end_status,
+      comic_pay_status,
+      page_num,
       rows_num: 20,
       order: '',
       _type: 'h5'
-    },
-    data: {
-      cateId,
-      endStatus,
-      comic,
-      pageNum
     }
-  }
+  })
 }

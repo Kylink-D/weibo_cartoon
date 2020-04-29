@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+    <Loading v-if="hasLoading"></Loading>
     <div class="home_content_loaded scroll">
       <!-- 下拉树新 -->
       <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
@@ -73,17 +74,20 @@
 import { Swiper, SwiperItem } from '@/components/Swiper'
 import { getHome } from '@/api/cartoon'
 import { Homeone, Hometwo } from '@/components/Home'
+import Loading from '@/components/Loading'
 export default {
   name: 'Home',
   components: {
     Swiper,
     SwiperItem,
     Homeone,
-    Hometwo
+    Hometwo,
+    Loading
   },
   data () {
     return {
       isLoading: false,
+      hasLoading: true,
       // homeData: {},
       swiperData: [],
       goodWork: [],
@@ -112,6 +116,7 @@ export default {
         this.hotWork = res.data.h5_recommend_female_hot_serial.slice(0, 2)
         this.recommWork = res.data.h5_recommend_female_xiaobian_recommend.slice(0, 3)
         this.weekWork = res.data.h5_recommend_female_week_recommend.slice(0, 3)
+        this.hasLoading = false
       })
     }
   },
