@@ -88,3 +88,12 @@ export const getRankthree = () => {
     method: 'GET'
   })
 }
+
+// get comicend data
+// http://manhua.weibo.cn/wbcomic/home/recommend_list?location_en=ending_works_list&_type=h5
+export const getComicend = () => {
+  return request({
+    url: '/wbcomic/home/recommend_list?location_en=ending_works_list&_type=h5',
+    method: 'GET'
+  })
+}

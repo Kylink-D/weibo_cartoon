@@ -5,7 +5,7 @@
       <div class="com_nav border">
         <div class="nav_content">
           <div class="nav_left">
-            <img src="../../assets/images/logo.png" alt />
+            <img src="@/assets/images/logo.png" alt />
           </div>
           <div class="nav_middle"></div>
           <div class="nav_right">
@@ -59,8 +59,8 @@
         <homeone :list="workPopular" :myclass="`fourClassic`" :title="list_location[2]"></homeone>
         <hometwo :list="workNew" :title="list_location[3]"></hometwo>
         <homeone :list="workHot" :myclass="`fourClassic`" :title="list_location[4]"></homeone>
-        <homeone :list="recommWork" :myclass="`threeClassic`" :title="list_location[5]"></homeone>
-        <homeone :list="weekWork" :myclass="`threeRow`" :title="list_location[6]"></homeone>
+        <homeone :list="workRecomm" :myclass="`threeClassic`" :title="list_location[5]"></homeone>
+        <homeone :list="workWeek" :myclass="`threeRow`" :title="list_location[6]"></homeone>
         <!-- 回到顶部 -->
         <el-backtop target=".home_content_loaded" :bottom="8" :right="8">
           <div class="goTop"></div>
@@ -120,6 +120,7 @@ export default {
       })
     }
   },
+  // 下面这些计算属性纯属多此一举了，但我不想改了
   computed: {
     workWeek () {
       return this.weekWork.map(item => {
@@ -244,21 +245,21 @@ export default {
           .nav_switch_gender {
             width: 44px;
             height: 44px;
-            background-image: url("../../assets/images/girl.8907d75c.png");
+            background-image: url("~@/assets/images/girl.8907d75c.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
           }
           .nav_serach {
             width: 44px;
             height: 44px;
-            background-image: url("../../assets/images/search.15e76af5.png");
+            background-image: url("~@/assets/images/search.15e76af5.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
           }
           .nav_mine {
             width: 44px;
             height: 44px;
-            background-image: url("../../assets/images/mine.01301e95.png");
+            background-image: url("~@/assets/images/mine.01301e95.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
           }
