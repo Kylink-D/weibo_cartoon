@@ -55,12 +55,12 @@
           </div>
         </div>
         <!-- 主体部分 -->
-        <homeone :list="workGood" :myclass="`threeClassic`" :title="list_location[1]"></homeone>
-        <homeone :list="workPopular" :myclass="`fourClassic`" :title="list_location[2]"></homeone>
-        <hometwo :list="workNew" :title="list_location[3]"></hometwo>
-        <homeone :list="workHot" :myclass="`fourClassic`" :title="list_location[4]"></homeone>
-        <homeone :list="workRecomm" :myclass="`threeClassic`" :title="list_location[5]"></homeone>
-        <homeone :list="workWeek" :myclass="`threeRow`" :title="list_location[6]"></homeone>
+        <homeone :list="workGood" :myclass="`threeClassic`" :en="list_en[1]" :title="list_location[1]"></homeone>
+        <homeone :list="workPopular" :myclass="`fourClassic`" :en="list_en[2]" :title="list_location[2]"></homeone>
+        <hometwo :list="workNew" :en="list_en[3]" :title="list_location[3]"></hometwo>
+        <homeone :list="workHot" :myclass="`fourClassic`" :en="list_en[4]" :title="list_location[4]"></homeone>
+        <homeone :list="workRecomm" :myclass="`threeClassic`" :en="list_en[5]" :title="list_location[5]"></homeone>
+        <homeone :list="workWeek" :myclass="`threeRow`" :en="list_en[6]" :title="list_location[6]"></homeone>
         <!-- 回到顶部 -->
         <el-backtop target=".home_content_loaded" :bottom="8" :right="8">
           <div class="goTop"></div>
@@ -186,6 +186,11 @@ export default {
     list_location () {
       return this.location_list.map(item => {
         return item.location_cn
+      })
+    },
+    list_en () {
+      return this.location_list.map(item => {
+        return item.location_en
       })
     }
   },

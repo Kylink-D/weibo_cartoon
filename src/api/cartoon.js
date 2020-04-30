@@ -120,3 +120,16 @@ export const getSearchResult = (word, page_num = 1) => {
     }
   })
 }
+
+// get more data
+// http://manhua.weibo.cn/wbcomic/home/recommend_list?location_en=h5_recommend_female_new_arrival&_type=h5
+export const getMoredata = (location_en = 'h5_recommend_female_fine_works') => {
+  return request({
+    url: '/wbcomic/home/recommend_list',
+    method: 'GET',
+    params: {
+      location_en,
+      _type: 'h5'
+    }
+  })
+}

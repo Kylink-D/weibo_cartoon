@@ -2,7 +2,7 @@
   <div class="recommend_block">
     <div class="home_recommend_header">
       <div class="home_recommend_title">{{title}}</div>
-      <div class="home_recommend_more">更多&gt;</div>
+      <div class="home_recommend_more" @click="$router.push({name: 'more', query: {location_en: en, title: title}})">更多&gt;</div>
     </div>
     <div>
       <div class="home_recommend_comics threeColumn">
@@ -57,6 +57,9 @@ export default {
       }
     },
     title: {
+      type: String
+    },
+    en: {
       type: String
     }
   }

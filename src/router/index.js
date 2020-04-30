@@ -11,6 +11,7 @@ const Register = () => import('../views/register')
 const Mine = () => import('../views/Mine')
 const Rank = () => import('../views/Rank')
 const Search = () => import('../views/Search')
+const More = () => import('../views/More')
 
 const router = new VueRouter({
   routes: [
@@ -49,6 +50,11 @@ const router = new VueRouter({
     {
       path: '/search',
       component: Search
+    },
+    {
+      path: '/more',
+      component: More,
+      name: 'more'
     },
     {
       path: '/',
