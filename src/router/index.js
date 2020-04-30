@@ -7,6 +7,7 @@ const Cate = () => import('../views/Cate')
 const Comicend = () => import('../views/Comicend')
 const Daypub = () => import('../views/Daypub')
 const Login = () => import('../views/Login')
+const Register = () => import('../views/register')
 const Mine = () => import('../views/Mine')
 const Rank = () => import('../views/Rank')
 const Search = () => import('../views/Search')
@@ -32,6 +33,10 @@ const router = new VueRouter({
     {
       path: '/login',
       component: Login
+    },
+    {
+      path: '/register',
+      component: Register
     },
     {
       path: '/mine',

@@ -1,11 +1,10 @@
 <template>
-  <User :go="'/register'" :title="'立即注册'" :isLogin="true">登录</User>
+  <User :go="'/login'" :title="'立即登录'" :isLogin="false">注册</User>
 </template>
-
 <script>
 import User from '@/components/User'
 export default {
-  name: 'Login',
+  name: 'Register',
   components: {
     User
   }
