@@ -79,7 +79,8 @@ export default {
       classTwo: 0,
       classThree: 0,
       pageNum: 1,
-      list: []
+      list: [],
+      isOver: false
     }
   },
   components: {
@@ -107,23 +108,25 @@ export default {
     },
     // 滚动翻页
     getMore (e) {
-      if (this.isShow) return
+      if (this.isShow || this.isOver) return
       if (this.$refs.scr.scrollHeight - this.$refs.scr.scrollTop - this.$refs.scr.clientHeight < 100) {
         this.isShow = true
         // 符合条件发起请求
         getClassdata(this.classOne, this.classTwo, this.classThree, this.pageNum).then(res => {
-          console.log(res.data.data)
+          // console.log(res.data.data)
           if (res.data.data.length > 0) {
             this.pageNum += 1
             this.list.push(...res.data.data)
             this.isShow = false
           } else {
+            this.isOver = true
             this.isShow = false
           }
         })
       }
     },
     changeClass () {
+      this.isOver = false
       // this.getClassdata(this.classOne, this.classTwo, this.classThree, this.pageNum)
       this.$refs.scr.scrollTop = 0
       this.pageNum = 1

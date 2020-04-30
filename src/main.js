@@ -9,6 +9,7 @@ import './assets/styles/base.scss'
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/styles/home1.scss'
 import './assets/styles/page.scss'
+import './assets/styles/vendors.scss'
 
 Vue.use(ElementUI)
 Vue.use(PullRefresh)

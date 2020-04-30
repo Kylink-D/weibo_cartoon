@@ -4,6 +4,7 @@
       <div class="comic_horizontal_container">
         <div
           class="comic_cover comice_horizontal_cover"
+          v-lazy="item.hcover"
           :style="`width: 144px; height: 81px; background-image: url(${item.hcover});`"
         ></div>
         <div class="comic_cover_horizontal_info">

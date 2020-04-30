@@ -8,6 +8,7 @@
           <div class="comic_cover_container" style="width: 100%;">
             <div
               class="comic_cover"
+              v-lazy="item.extra.hcover"
               :style="`width: 100%; height: 211px; background-image: url(${item.extra.hcover});`"
             ></div>
             <div class="comic_cover_info">

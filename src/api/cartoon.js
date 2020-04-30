@@ -98,11 +98,25 @@ export const getComicend = () => {
   })
 }
 
-// searce data
+// search data
 // http://manhua.weibo.cn/wbcomic/home/hot_words?_type=h5
 export const getHotsearch = () => {
   return request({
     url: '/wbcomic/home/hot_words?_type=h5',
     method: 'GET'
+  })
+}
+
+// get search result
+// http://manhua.weibo.cn/wbcomic/home/search?word=%E6%88%91%E6%98%AF&page_num=1&_type=h5
+export const getSearchResult = (word, page_num = 1) => {
+  return request({
+    url: 'wbcomic/home/search',
+    method: 'GET',
+    params: {
+      word,
+      page_num,
+      _type: 'h5'
+    }
   })
 }
