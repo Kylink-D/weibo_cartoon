@@ -9,10 +9,10 @@
         <div
           class="home_recommend_comic"
           v-for="item in list"
-          :key="item.info_id"
+          :key="item.extra.comic_id"
           v-lazy="item.image_ext_url"
         >
-          <div class="comic_cover_container" style="width: 100%;">
+          <div class="comic_cover_container" style="width: 100%;" @click="$router.push({name: 'detailspage',query: {comic_id: item.extra.comic_id}})">
             <div
               class="comic_cover"
               :style="

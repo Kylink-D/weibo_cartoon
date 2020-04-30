@@ -27,10 +27,10 @@
               <swiper-item
                 class="swiper-item"
                 v-for="item in swiperData"
-                :key="item.info_id"
+                :key="item.extra.comic_id"
                 v-lazy="item.image_ext_url"
               >
-                <img :src="item.image_ext_url" alt="" />
+                <img :src="item.image_ext_url" alt=""/>
               </swiper-item>
             </swiper>
           </div>
@@ -128,7 +128,8 @@ export default {
           info_id: item.info_id,
           title: item.title,
           watching_focus: item.extra.watching_focus,
-          image_ext_url: item.image_ext_url
+          image_ext_url: item.image_ext_url,
+          extra: item.extra
         }
       })
     },
@@ -138,7 +139,8 @@ export default {
           info_id: item.info_id,
           title: item.title,
           watching_focus: item.extra.watching_focus,
-          image_ext_url: item.image_ext_url
+          image_ext_url: item.image_ext_url,
+          extra: item.extra
         }
       })
     },
@@ -148,7 +150,8 @@ export default {
           info_id: item.info_id,
           title: item.title,
           watching_focus: item.extra.watching_focus,
-          image_ext_url: item.image_ext_url
+          image_ext_url: item.image_ext_url,
+          extra: item.extra
         }
       })
     },
@@ -159,7 +162,8 @@ export default {
           title: item.title,
           sina_nickname: item.extra.sina_nickname,
           cate_list: item.cate_list,
-          image_ext_url: item.image_ext_url
+          image_ext_url: item.image_ext_url,
+          extra: item.extra
         }
       })
     },
@@ -169,7 +173,8 @@ export default {
           info_id: item.info_id,
           title: item.title,
           watching_focus: item.extra.watching_focus,
-          image_ext_url: item.image_ext_url
+          image_ext_url: item.image_ext_url,
+          extra: item.extra
         }
       })
     },
@@ -179,7 +184,8 @@ export default {
           info_id: item.info_id,
           title: item.title,
           watching_focus: item.extra.watching_focus,
-          image_ext_url: item.image_ext_url
+          image_ext_url: item.image_ext_url,
+          extra: item.extra
         }
       })
     },

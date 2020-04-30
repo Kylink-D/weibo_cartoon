@@ -133,3 +133,21 @@ export const getMoredata = (location_en = 'h5_recommend_female_fine_works') => {
     }
   })
 }
+
+// get details data
+// http://manhua.weibo.cn/wbcomic/comic/comic_show?comic_id=71229&create_source=h5&_=1588262343052&_type=h5
+// http://manhua.weibo.cn/wbcomic/comic/comic_show?comic_id=68665&create_source=h5&_=1588262486163&_type=h5
+// http://manhua.weibo.cn/wbcomic/comic/comic_show?comic_id=71554&create_source=h5&_=1588262636506&_type=h5
+// eslint-disable-next-line camelcase
+export const getDetailsdata = (comic_id) => {
+  return request({
+    url: '/wbcomic/comic/comic_show',
+    method: 'GET',
+    params: {
+      comic_id,
+      create_source: 'h5',
+      _: new Date().getTime(),
+      _type: 'h5'
+    }
+  })
+}

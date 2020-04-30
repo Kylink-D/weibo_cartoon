@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="rank_list_con" v-for="item in list" :key="item.comic_id">
-      <div class="comic_horizontal_container">
+      <div class="comic_horizontal_container" @click="$router.push({name: 'detailspage',query: {comic_id: item.comic_id}})">
         <div
           class="comic_cover comice_horizontal_cover"
           v-lazy="item.hcover"

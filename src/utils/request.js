@@ -34,7 +34,7 @@ instance.interceptors.response.use(
   },
   error => {
     console.log(error)
-    Notify('网络异常，请稍后再试')
+    Notify('请用手机访问')
     return Promise.reject(error)
   }
 )

@@ -26,11 +26,12 @@
           <div class="loadMore">
             <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
               <div class="category_comic_container">
-                <div class="comic_cover_container" style="width: 185px;" v-for="(item, index) in list" :key="index">
+                <div class="comic_cover_container" style="width: 185px;" v-for="item in list" :key="item.comic_id">
                   <div
                     class="comic_cover"
                     :style="`width: 185px; height: 105px; background-image: url(${item.comic_hcover});`"
                     v-lazy="item.comic_hcover"
+                     @click="$router.push({name: 'detailspage',query: {comic_id: item.comic_id}})"
                   ></div>
                   <div class="comic_cover_info">
                     <div class="comic_cover_titleBox">

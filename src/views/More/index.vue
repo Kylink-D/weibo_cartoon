@@ -1,11 +1,11 @@
 <template>
   <div class="view-more">
-    <HeaderType>{{title}}</HeaderType>
+    <HeaderType style="border-bottom: 0.02667rem solid #e6e6e6;">{{title}}</HeaderType>
     <Loading v-if="hasLoading"></Loading>
     <div class="list_loaded scroll">
       <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
         <div class="com-item" v-for="item in list[message]" :key="item.extra.comic_id">
-          <div class="item-cover">
+          <div class="item-cover" @click="$router.push({name: 'detailspage',query: {comic_id: item.extra.comic_id}})">
             <div
               class="comic_cover"
               v-lazy="item.extra.hcover"

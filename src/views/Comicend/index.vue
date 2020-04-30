@@ -4,8 +4,8 @@
     <Loading v-if="hasLoading"></Loading>
     <div class="end_list_box scroll">
       <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
-        <div class="end_list_item" v-for="item in list" :key="item.object_id">
-          <div class="comic_cover_container" style="width: 100%;">
+        <div class="end_list_item" v-for="item in list" :key="item.extra.comic_id">
+          <div class="comic_cover_container" style="width: 100%;" @click="$router.push({name: 'detailspage',query: {comic_id: item.extra.comic_id}})">
             <div
               class="comic_cover"
               v-lazy="item.extra.hcover"

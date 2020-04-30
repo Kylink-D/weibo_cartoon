@@ -2,9 +2,9 @@
   <div class="search_result">
     <div class="loadMoreWraper scroll" ref="scr" @scroll="$emit('getMore', $event.srcElement)">
       <div class="loadMore">
-        <div class="search_list" v-for="item in list" :key="item.id">
+        <div class="search_list" v-for="item in list" :key="item.comic_id">
           <a href="javascript:;" class=""
-            ><div class="searchList">
+            ><div class="searchList" @click="$router.push({name: 'detailspage',query: {comic_id: item.comic_id}})">
               <div class="search_list_img">
                 <div
                   class="comic_cover"
