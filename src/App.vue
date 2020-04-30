@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <keep-alive exclude="Search,Login,Register,More,detailspage">
+    <keep-alive exclude="Search,Login,Register,More,detailspage,Readcomics">
       <router-view/>
     </keep-alive>
   </div>

@@ -13,6 +13,7 @@ const Rank = () => import('../views/Rank')
 const Search = () => import('../views/Search')
 const More = () => import('../views/More')
 const Detailspage = () => import('../views/Detailspage')
+const Readcomics = () => import('../views/Readcomics')
 
 const router = new VueRouter({
   routes: [
@@ -61,6 +62,11 @@ const router = new VueRouter({
       path: '/detailspage',
       component: Detailspage,
       name: 'detailspage'
+    },
+    {
+      path: '/readcomics',
+      component: Readcomics,
+      name: 'readcomics'
     },
     {
       path: '/',
