@@ -28,7 +28,7 @@
           <img
             class="chapter_content_img"
             :src="item.mobileImgUrl"
-            lazy="loaded"
+            v-lazy="item.mobileImgUrl"
           />
         </div>
       </div>
@@ -124,8 +124,14 @@ export default {
       getReaddata(str).then(res => {
         this.list = res.data
         this.page = res.data.chapter_list
-        this.num = Number(res.data.chapter.chapter_name.substr(0, 2))
+        // this.num = Number(res.data.chapter.chapter_name.substr(0, 2)) || Number(res.data.chapter.chapter_name.replace(/[^0-9]/ig, '')) + 1
         this.hasLoading = false
+        if (!window.localStorage.getItem(res.data.comic.comic_id)) {
+          window.localStorage.setItem(res.data.comic.comic_id, 1)
+          this.num = 1
+        } else {
+          this.num = Number(window.localStorage.getItem(res.data.comic.comic_id))
+        }
       })
     },
     next () {
@@ -136,6 +142,7 @@ export default {
         }
       })
       this.reload()
+      window.localStorage.setItem(this.list.comic.comic_id, this.num + 1)
     },
     last () {
       if (this.num === 1) return
@@ -146,6 +153,7 @@ export default {
         }
       })
       this.reload()
+      window.localStorage.setItem(this.list.comic.comic_id, this.num - 1)
     }
   },
   inject: ['reload'],

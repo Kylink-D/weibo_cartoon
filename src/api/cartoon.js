@@ -7,7 +7,7 @@ import request from '@/utils/request'
 // http://manhua.weibo.cn/wbcomic/home/page_recommend_list?mca=h5_recommend_female&_type=h5
 export const getHome = () => {
   return request({
-    url: '/wbcomic/home/page_recommend_list?mca=h5_recommend_female&_type=h5',
+    url: '/carton/wbcomic/home/page_recommend_list?mca=h5_recommend_female&_type=h5',
     method: 'GET'
   })
 }
@@ -16,7 +16,7 @@ export const getHome = () => {
 // http://manhua.weibo.cn/wbcomic/comic/daypub_list?pub_day=&page_num=1&rows_num=20&_type=h5
 export const getDay = () => {
   return request({
-    url: '/wbcomic/comic/daypub_list?pub_day=&page_num=1&rows_num=20&_type=h5',
+    url: '/carton/wbcomic/comic/daypub_list?pub_day=&page_num=1&rows_num=20&_type=h5',
     method: 'GET'
   })
 }
@@ -25,7 +25,7 @@ export const getDay = () => {
 // http://manhua.weibo.cn/wbcomic/comic/filter_list?_type=h5
 export const getClassname = () => {
   return request({
-    url: '/wbcomic/comic/filter_list?_type=h5',
+    url: '/carton/wbcomic/comic/filter_list?_type=h5',
     method: 'GET'
   })
 }
@@ -51,7 +51,7 @@ export const getClassname = () => {
  */
 export const getClassdata = (cate_id = 0, end_status = 0, comic_pay_status = 0, page_num = 1) => {
   return request({
-    url: '/wbcomic/comic/filter_result',
+    url: '/carton/wbcomic/comic/filter_result',
     method: 'GET',
     params: {
       cate_id,
@@ -70,21 +70,21 @@ export const getClassdata = (cate_id = 0, end_status = 0, comic_pay_status = 0, 
 // 综合榜 http://manhua.weibo.cn/wbcomic/home/rank?_type=h5
 export const getRankone = () => {
   return request({
-    url: '/wbcomic/home/rank_read?_type=h5',
+    url: '/carton/wbcomic/home/rank_read?_type=h5',
     method: 'GET'
   })
 }
 // 新作榜 http://manhua.weibo.cn/wbcomic/home/rank_share?_type=h5
 export const getRanktwo = () => {
   return request({
-    url: '/wbcomic/home/rank_share?_type=h5',
+    url: '/carton/wbcomic/home/rank_share?_type=h5',
     method: 'GET'
   })
 }
 // 综合榜 http://manhua.weibo.cn/wbcomic/home/rank?_type=h5
 export const getRankthree = () => {
   return request({
-    url: '/wbcomic/home/rank?_type=h5',
+    url: '/carton/wbcomic/home/rank?_type=h5',
     method: 'GET'
   })
 }
@@ -93,7 +93,7 @@ export const getRankthree = () => {
 // http://manhua.weibo.cn/wbcomic/home/recommend_list?location_en=ending_works_list&_type=h5
 export const getComicend = () => {
   return request({
-    url: '/wbcomic/home/recommend_list?location_en=ending_works_list&_type=h5',
+    url: '/carton/wbcomic/home/recommend_list?location_en=ending_works_list&_type=h5',
     method: 'GET'
   })
 }
@@ -102,7 +102,7 @@ export const getComicend = () => {
 // http://manhua.weibo.cn/wbcomic/home/hot_words?_type=h5
 export const getHotsearch = () => {
   return request({
-    url: '/wbcomic/home/hot_words?_type=h5',
+    url: '/carton/wbcomic/home/hot_words?_type=h5',
     method: 'GET'
   })
 }
@@ -111,7 +111,7 @@ export const getHotsearch = () => {
 // http://manhua.weibo.cn/wbcomic/home/search?word=%E6%88%91%E6%98%AF&page_num=1&_type=h5
 export const getSearchResult = (word, page_num = 1) => {
   return request({
-    url: 'wbcomic/home/search',
+    url: '/cartonwbcomic/home/search',
     method: 'GET',
     params: {
       word,
@@ -125,7 +125,7 @@ export const getSearchResult = (word, page_num = 1) => {
 // http://manhua.weibo.cn/wbcomic/home/recommend_list?location_en=h5_recommend_female_new_arrival&_type=h5
 export const getMoredata = (location_en = 'h5_recommend_female_fine_works') => {
   return request({
-    url: '/wbcomic/home/recommend_list',
+    url: '/carton/wbcomic/home/recommend_list',
     method: 'GET',
     params: {
       location_en,
@@ -141,7 +141,7 @@ export const getMoredata = (location_en = 'h5_recommend_female_fine_works') => {
 // eslint-disable-next-line camelcase
 export const getDetailsdata = (comic_id) => {
   return request({
-    url: '/wbcomic/comic/comic_show',
+    url: '/carton/wbcomic/comic/comic_show',
     method: 'GET',
     params: {
       comic_id,
@@ -158,7 +158,7 @@ export const getDetailsdata = (comic_id) => {
 // eslint-disable-next-line camelcase
 export const getReaddata = (chapter_id) => {
   return request({
-    url: '/wbcomic/comic/comic_play',
+    url: '/carton/wbcomic/comic/comic_play',
     method: 'GET',
     params: {
       chapter_id,
