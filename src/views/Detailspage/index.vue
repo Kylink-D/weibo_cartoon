@@ -54,6 +54,7 @@
               type="button"
               class="comic_button"
               style="width: 88px; height: 36px; font-size: 14px;"
+              @click="$router.push({name: 'readcomics', query: {chapter_id: list.chapter_list[0].chapter_id}})"
             >
               开始阅读
             </button>

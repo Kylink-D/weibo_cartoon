@@ -151,3 +151,20 @@ export const getDetailsdata = (comic_id) => {
     }
   })
 }
+
+// get readcomics data
+// http://manhua.weibo.cn/wbcomic/comic/comic_play?chapter_id=263139&create_source=h5&_=1588322131854&_type=h5
+// http://manhua.weibo.cn/wbcomic/comic/comic_play?chapter_id=263189&create_source=h5&_=1588322212561&_type=h5
+// eslint-disable-next-line camelcase
+export const getReaddata = (chapter_id) => {
+  return request({
+    url: '/wbcomic/comic/comic_play',
+    method: 'GET',
+    params: {
+      chapter_id,
+      create_source: 'h5',
+      _: new Date().getTime(),
+      _type: 'h5'
+    }
+  })
+}
