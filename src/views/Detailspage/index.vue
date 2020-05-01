@@ -103,7 +103,7 @@
           <div>
             <ul class="catalog_list row_catalog_list">
               <li chapter_id="405772" class="catalog_ceil" v-for="item in list.chapter_list" :key="item.chapter_id">
-                <div class="chapter_name lock">
+                <div class="chapter_name lock" @click="$router.push({name: 'readcomics', query: {chapter_id: list.chapter_list[0].chapter_id}})">
                   <div class="name-box"><p class="name">{{item.chapter_name}}</p></div>
                   <span></span>
                 </div>
