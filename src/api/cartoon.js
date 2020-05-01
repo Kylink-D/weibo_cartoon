@@ -111,7 +111,7 @@ export const getHotsearch = () => {
 // http://manhua.weibo.cn/wbcomic/home/search?word=%E6%88%91%E6%98%AF&page_num=1&_type=h5
 export const getSearchResult = (word, page_num = 1) => {
   return request({
-    url: '/cartonwbcomic/home/search',
+    url: '/carton/wbcomic/home/search',
     method: 'GET',
     params: {
       word,
